@@ -1,1 +1,6 @@
 actions folder  have multiple actions
+
+1. on page refresh redux data get clean 
+2. page have multiple reducer but actions can connect to only one reducer i.e rootReducer
+3 . get data from redux to react - > useSelectorHOok 
+4. Gen func 

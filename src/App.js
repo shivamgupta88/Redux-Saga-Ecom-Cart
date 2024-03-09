@@ -1,25 +1,16 @@
 import './App.css';
-import { addToCart } from './redux/action';
-import {  useDispatch } from 'react-redux';
-
-
+import Header from './components/Header';
+import Main from './components/Main';
+import {Routes, Route} from 'react-router-dom'
+import Cart from './components/Cart';
 function App() {
-  const dispatch = useDispatch() ; 
-
-  const product = {
-    name : "Peanut Butter" , 
-    category  : "food" , 
-    price : "300", 
-    color : "brown "
-   }
   return (
     <div className="App">
-      <header className="App-header">
-        Hello Shivam
-      </header>
-      <button onClick={ () => dispatch(addToCart(product))}>add to c 
-
-      </button>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/cart' element={<Cart />} />
+      </Routes>
     </div>
   );
 }
